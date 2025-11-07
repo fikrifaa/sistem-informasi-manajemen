@@ -24,7 +24,7 @@ include_once 'php_action/do_kirimLaporan.php';
 
 	<link href="https://fonts.googleapis.com/css?family=Rajdhani:400,500,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
-<link rel="stylesheet" href="assets/public/css/style.css">
+	<link rel="stylesheet" href="assets/public/css/style.css">
 </head>
 
 <body>
@@ -81,102 +81,107 @@ include_once 'php_action/do_kirimLaporan.php';
 		</div>
 	</section>
 
-<section id="about">
-  <div class="about-wrapper">
-    <div class="section-title">
-      <img src="./images/pengaduan/ewing.png" alt="Logo" class="logo">
-      <h4>CEPAT. AMAN. DAN TRANSPARAN.</h4>
-      <h1>LAYANAN ASPIRASI &<br>PENGADUAN PUBLIK</h1>
-      <p>
-        Portal resmi untuk menyalurkan aspirasi dan pengaduan Anda. Kami berkomitmen menghadirkan layanan yang 
-        <strong>cepat, aman, dan transparan</strong> agar setiap laporan masyarakat dapat segera ditindaklanjuti 
-        bersama instansi terkait.
-      </p>
-      <div class="action-buttons">
-				<a href="#" data-toggle="modal" data-target="#login" class="btn btn-primary">LAPOR SEKARANG</a>
-        <a href="./admin/laporan.php" class="btn btn-secondary">Cek Status Laporan</a>
-      </div>
+	<section id="about">
+		<div class="about-wrapper">
+			<div class="section-title">
+				<img src="./images/pengaduan/ewing.png" alt="Logo" class="logo">
+				<h4>CEPAT. AMAN. DAN TRANSPARAN.</h4>
+				<h1>LAYANAN ASPIRASI &<br>PENGADUAN PUBLIK</h1>
+				<p>
+					Portal resmi untuk menyalurkan aspirasi dan pengaduan Anda. Kami berkomitmen menghadirkan layanan yang
+					<strong>cepat, aman, dan transparan</strong> agar setiap laporan masyarakat dapat segera ditindaklanjuti
+					bersama instansi terkait.
+				</p>
+				<div class="action-buttons">
+					<?php if (isset($_SESSION['nik'])): ?>
+						<a href="#contact" class="btn btn-primary">LAPOR SEKARANG</a>
+					<?php else: ?>
+						<a href="#" data-toggle="modal" data-target="#login" class="btn btn-primary">LAPOR SEKARANG</a>
+					<?php endif; ?>
 
-      <div class="info">
-        <h3>Kenapa Lapor Melalui Kami?</h3>
-        <div class="features">
-          <div class="feature">
-            <i class="fas fa-clock"></i>
-            <h5>Cepat</h5>
-            <p>Waktu rata-rata penanganan laporan cepat dan efisien.</p>
-          </div>
-          <div class="feature">
-            <i class="fas fa-shield-alt"></i>
-            <h5>Aman</h5>
-            <p>Data pelapor dijamin kerahasiaannya.</p>
-          </div>
-          <div class="feature">
-            <i class="fas fa-chart-line"></i>
-            <h5>Transparan</h5>
-            <p>Status laporan dapat dipantau secara terbuka.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+					<a href="./lapor.php" class="btn btn-secondary">Cek Status Laporan</a>
+				</div>
 
-    <div class="about-thumb">
-      <img src="images/tangan-mengepal.jpg" alt="Ilustrasi Pengaduan Masyarakat">
-    </div>
-  </div>
-</section>
+				<div class="info">
+					<h3>Kenapa Lapor Melalui Kami?</h3>
+					<div class="features">
+						<div class="feature">
+							<i class="fas fa-clock"></i>
+							<h5>Cepat</h5>
+							<p>Waktu rata-rata penanganan laporan cepat dan efisien.</p>
+						</div>
+						<div class="feature">
+							<i class="fas fa-shield-alt"></i>
+							<h5>Aman</h5>
+							<p>Data pelapor dijamin kerahasiaannya.</p>
+						</div>
+						<div class="feature">
+							<i class="fas fa-chart-line"></i>
+							<h5>Transparan</h5>
+							<p>Status laporan dapat dipantau secara terbuka.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="about-thumb">
+				<img src="images/tangan-mengepal.jpg" alt="Ilustrasi Pengaduan Masyarakat">
+			</div>
+		</div>
+	</section>
 
 	<?php if (isset($_SESSION['nik'])): ?>
-	
-	<section id="contact">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-offset-2 col-md-8 col-sm-12">
-        <div class="section-title text-center">
-          <h1 class="wow fadeInUp" data-wow-delay="0.3s">Formulir Pengaduan</h1>
-          <p class="wow fadeInUp" data-wow-delay="0.6s">
-            Sampaikan laporan Anda secara lengkap agar dapat segera kami tindaklanjuti.
-          </p>
-        </div>
 
-        <div class="contact-form wow fadeInUp" data-wow-delay="0.8s">
-          <form id="contact-form" method="post" action="index.php" enctype="multipart/form-data">
-            
-            <div class="row">
-              <div class="col-md-6 col-sm-6 mb-3">
-                <label for="kategori">Kategori Laporan</label>
-                <select name="kategori" class="form-control" required>
-                  <option value="">-- Pilih Kategori Laporan --</option>
-                  <option value="Pelayanan Publik">Pelayanan Publik</option>
-                  <option value="Infrastruktur">Infrastruktur</option>
-                  <option value="Keamanan">Keamanan</option>
-                  <option value="Lingkungan">Lingkungan</option>
-                  <option value="Sosial">Sosial</option>
-                  <option value="Kesehatan">Kesehatan</option>
-                  <option value="Lainnya">Lainnya</option>
-                </select>
-              </div>
+		<section id="contact">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-offset-2 col-md-8 col-sm-12">
+						<div class="section-title text-center">
+							<h1 class="wow fadeInUp" data-wow-delay="0.3s">Formulir Pengaduan</h1>
+							<p class="wow fadeInUp" data-wow-delay="0.6s">
+								Sampaikan laporan Anda secara lengkap agar dapat segera kami tindaklanjuti.
+							</p>
+						</div>
 
-              <div class="col-md-6 col-sm-6 mb-3">
-                <label for="foto">Lampirkan Bukti Foto</label>
-                <input name="foto" type="file" class="form-control" accept="image/*" required>
-              </div>
+						<div class="contact-form wow fadeInUp" data-wow-delay="0.8s">
+							<form id="contact-form" method="post" action="index.php" enctype="multipart/form-data">
 
-              <div class="col-md-12 col-sm-12">
-                <label for="isi_laporan">Isi Laporan</label>
-                <textarea name="isi_laporan" class="form-control" placeholder="Tuliskan aduan atau laporan Anda di sini..." rows="6" required></textarea>
-              </div>
+								<div class="row">
+									<div class="col-md-6 col-sm-6 mb-3">
+										<label for="kategori">Kategori Laporan</label>
+										<select name="kategori" class="form-control" required>
+											<option value="">-- Pilih Kategori Laporan --</option>
+											<option value="Pelayanan Publik">Pelayanan Publik</option>
+											<option value="Infrastruktur">Infrastruktur</option>
+											<option value="Keamanan">Keamanan</option>
+											<option value="Lingkungan">Lingkungan</option>
+											<option value="Sosial">Sosial</option>
+											<option value="Kesehatan">Kesehatan</option>
+											<option value="Lainnya">Lainnya</option>
+										</select>
+									</div>
 
-              <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 mt-3">
-                <input name="btnMessages" type="submit" class="form-control submit" id="submit" value="KIRIM LAPORAN">
-              </div>
-            </div>
+									<div class="col-md-6 col-sm-6 mb-3">
+										<label for="foto">Lampirkan Bukti Foto</label>
+										<input name="foto" type="file" class="form-control" accept="image/*" required>
+									</div>
 
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+									<div class="col-md-12 col-sm-12">
+										<label for="isi_laporan">Isi Laporan</label>
+										<textarea name="isi_laporan" class="form-control" placeholder="Tuliskan aduan atau laporan Anda di sini..." rows="6" required></textarea>
+									</div>
+
+									<div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 mt-3">
+										<input name="btnMessages" type="submit" class="form-control submit" id="submit" value="KIRIM LAPORAN">
+									</div>
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
 	<?php endif; ?>
 
@@ -283,4 +288,5 @@ include_once 'php_action/do_kirimLaporan.php';
 	<script src="assets/public/js/custom.js"></script>
 
 </body>
+
 </html>

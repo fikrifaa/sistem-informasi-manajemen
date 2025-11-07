@@ -322,7 +322,7 @@ footer {
 #contact .section-title p {
   font-size: 16px;
   color: #555;
-  margin-bottom: 40px;
+  margin-bottom: -20px;
 }
 
 #contact .contact-form {
@@ -341,7 +341,7 @@ footer {
 #contact label {
   font-weight: 600;
   color: #333;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 #contact .form-control {
@@ -350,13 +350,13 @@ footer {
   border-radius: 8px;
   box-shadow: none;
   font-size: 15px;
-  padding: 12px 15px;
+  padding: 4px 10px;
   transition: all 0.3s ease;
 }
 
 #contact .form-control:focus {
-  border-color: #0d6efd;
-  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+  border-color: #b71c1c;
+  box-shadow: 0 0 0 0.2rem rgba(183, 28, 28, 0.35);
   background: #fff;
 }
 
@@ -373,20 +373,22 @@ footer {
 }
 
 #contact input[type="submit"] {
-  background: #0d6efd;
+  background: #d32f2f;
   border: none;
   color: #fff;
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 1px;
   border-radius: 8px;
-  padding: 14px;
+  padding: 5px;
   transition: all 0.4s ease-in-out;
   width: 100%;
+  margin-top: 20px;
+  margin-bottom: -20px;
 }
 
 #contact input[type="submit"]:hover {
-  background: #0b5ed7;
+  background: #b71c1c;
   transform: translateY(-2px);
 }
 
@@ -423,10 +425,6 @@ footer .copyright-text {
 
 footer a {
   color: #fff;
-}
-
-footer a:hover {
-  color: #ff6;
 }
 
 /* svg */
@@ -530,7 +528,7 @@ footer a:hover {
 }
 
 .go-top:hover {
-  background: #125b60;
+  background: #d32f2f;
   color: #ffffff;
 }
 
@@ -639,29 +637,26 @@ footer a:hover {
 }
 
 .userLogin:hover {
-  background: red !important;
+  background: #b71c1c !important;
   color: #fff !important;
 }
 
 .userLogin:active {
-  background: #f1c11a !important;
+  background: #d32f2f !important;
   color: #fff !important;
-  border: 3px solid #f1c11a !important;
+  border: 3px solid #d32f2f !important;
 }
 
 .userLogin:focus {
-  background: #f1c11a !important;
+  background: #b71c1c !important;
   color: #fff !important;
-  border: 3px solid #f1c11a !important;
+  border: 3px solid #b71c1c !important;
 }
 
 .userLoginUsername::first-letter {
   text-transform: uppercase;
 }
 
-.user {
-  margin: 2.5rem;
-}
 #about {
   background: #fff;
   padding: 80px 0;
@@ -806,7 +801,7 @@ footer a:hover {
 
 /* feature section */
 #feature {
-  background: #125b60;
+  background: #d32f2f;
 }
 
 #feature .icon {

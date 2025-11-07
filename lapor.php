@@ -47,15 +47,15 @@ include_once 'php_action/do_editLaporan.php';
   <section id="contact">
     <div class="container">
       <div class="row">
-        <div class="col-md-offset-2 col-md-8 col-sm-12">
+        <div class="col-md-offset-1 col-md-10 col-sm-12" style="margin-top: -20px; margin-bottom: 50px;">
           <div class="section-title">
             <h1 class="wow fadeInUp" data-wow-delay="0.3s">Halo <?php echo $_SESSION['nama'] ?></h1>
             <h3 class="wow fadeInUp" data-wow-delay="0.6s">Berikut repositori dari laporan Anda.</h3>
           </div>
           <div class="contact-form wow fadeInUp" data-wow-delay="1.0s">
 
-            <div class="float" style="padding-bottom:20px;">
-              <a class="btn btn-info" href="index.php">Kembali</a>
+            <div class="float" style="padding-bottom: 20px;">
+              <a class="btn btn-danger" href="index.php">Kembali</a>
             </div>
             <div class="table-responsive">
               <table id="laporan" class="table table-bordered">
@@ -134,35 +134,31 @@ include_once 'php_action/do_editLaporan.php';
     <div class="container">
       <div class="row">
         <svg class="svgcolor-light" preserveAspectRatio="none" viewBox="0 0 100 102" height="100" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 0 L50 100 L100 0 Z"></path>
+          <path d="M0 0 L50 80 L100 0 Z"></path>
         </svg>
         <div class="col-md-4 col-sm-6">
-          <h2>Pengaduan Masyarakat</h2>
+          <h2>Portal Pengaduan Masyarakat</h2>
           <div class="wow fadeInUp" data-wow-delay="0.3s">
-            <p class="text-justify">Sebuah konser besar besaran, tapi tidak melebih lebihkan. Dapat ditonton oleh orang yang tuli, dan dapat didengar dengan orang buta. Berlaku untuk semua kalangan, baik muda maupun yang tidak dapat diperkerikan seperti apa mudanya.<br> Jangan lupa untuk senang.</p>
-            <p class="copyright-text">Copyright &copy; 2018 <br>
-              Modified by <a rel="nofollow" href="" target="_parent">Tukang Koding</a></p>
+            <p class="text-justify">Platform digital untuk menyalurkan aspirasi dan pengaduan masyarakat kepada pemerintah secara mudah dan cepat. Bersama kita wujudkan pemerintahan yang transparan dan responsif.
           </div>
         </div>
         <div class="col-md-1 col-sm-1"></div>
         <div class="col-md-4 col-sm-5">
-          <h2>Location</h2>
-          <p class="wow fadeInUp" data-wow-delay="0.6s">
-            Berada, dalam peredaran manusia<br>
-            Masih bisa dihirup aromanya lewat hidung, dan mudah dilihat dengan mata.<br>
-            Indonesia.
-          </p>
-          <ul class="social-icon">
-            <li><a href="#" class="fa fa-facebook wow bounceIn" data-wow-delay="0.9s"></a></li>
-            <li><a href="#" class="fa fa-twitter wow bounceIn" data-wow-delay="1.2s"></a></li>
-            <li><a href="#" class="fa fa-behance wow bounceIn" data-wow-delay="1.4s"></a></li>
-            <li><a href="#" class="fa fa-dribbble wow bounceIn" data-wow-delay="1.6s"></a></li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </footer>
+          <h2>Kontak Kami</h2>
+					<p class="wow fadeInUp" data-wow-delay="0.6s">
+						UNIVERSITAS PAMULANG<br>
+						Kota Tangerang Selatan, Banten 15323
+					</p>
+					<ul class="social-icon">
+						<li><a href="#" class="fa fa-instagram wow bounceIn" data-wow-delay="0.9s"></a></li>
+						<li><a href="#" class="fa fa-whatsapp wow bounceIn" data-wow-delay="1.2s"></a></li>
+						<li><a href="#" class="fa fa-facebook wow bounceIn" data-wow-delay="1.4s"></a></li>
+					</ul>
+					<p class="copyright-text">© M. Faisal, Fathir. M, Fikri. F | All Rights Reserved</p>
+				</div>
+			</div>
+		</div>
+	</footer>
 
   <!-- Login Modal -->
   <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
